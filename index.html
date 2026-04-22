@@ -470,7 +470,7 @@ function R(){
 }
 
 function rMenu(){
-  const modes=[['mock','\uD83C\uDFAF Generar Prueba','180 con pesos CFA L1 de 720'],['mix','Mix Total','900 preguntas mezcladas'],['speed20','Speed Round','20 aleatorias'],['speed50','Sprint 50','50 aleatorias']];
+  const modes=[['mock','\uD83C\uDFAF Generar Prueba','180 con pesos CFA L1 de 900'],['mix','Mix Total','900 preguntas mezcladas'],['speed20','Speed Round','20 aleatorias'],['speed50','Sprint 50','50 aleatorias']];
   const errCount=getErrors().length;
   return '<div class="menu"><div class="ml">CFA Level I</div><div class="mt">Practice Timer</div><p class="ms">900 preguntas · Respuestas y explicaciones incluidas</p><div class="mg">'+
     modes.map(m=>'<button class="mb" onclick="start(\''+m[0]+'\')"><div><div class="l">'+m[1]+'</div><div class="d">'+m[2]+'</div></div><div class="a">\u2192</div></button>').join('')+
