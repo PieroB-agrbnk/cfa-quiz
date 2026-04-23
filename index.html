@@ -29,18 +29,27 @@
 .pf{height:100%;border-radius:2px;background:linear-gradient(90deg,#3b82f6,#a78bfa);transition:width .3s}
 .sr{max-width:720px;margin:8px auto 0;display:flex;gap:14px;justify-content:center;font-size:12px;color:var(--mt);flex-wrap:wrap}
 .sr b{font-weight:700}
-.qh{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
-.qn{font-size:13px;font-weight:700;color:var(--mt)}
-.qs{font-size:11px;padding:3px 10px;border-radius:20px;background:rgba(96,165,250,.1);color:var(--ac);font-weight:600}
-.qc{background:var(--sf);border-radius:16px;padding:22px;border:1px solid var(--bd);margin-bottom:14px}
-.qt{font-size:15px;line-height:1.7;white-space:pre-wrap;font-variant-numeric:tabular-nums}
-.os{display:flex;flex-direction:column;gap:8px;margin-bottom:16px}
-.ob{background:rgba(22,30,48,.6);border:1.5px solid var(--bd);border-radius:12px;padding:15px 18px;cursor:pointer;text-align:left;color:#cbd5e1;font-size:14px;line-height:1.6;transition:all .15s;font-family:var(--ff);white-space:pre-wrap}
-.ob:hover:not(.lk){border-color:rgba(96,165,250,.35);background:rgba(51,65,85,.45)}
-.ob.sl{background:rgba(96,165,250,.12);border-color:rgba(96,165,250,.45);color:#93c5fd}
-.ob.ok{background:rgba(52,211,153,.1);border-color:rgba(52,211,153,.4);color:#6ee7b7}
-.ob.no{background:rgba(248,113,113,.08);border-color:rgba(248,113,113,.3);color:#fca5a5}
+.qh{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:8px}
+.qn{font-size:11px;font-weight:800;color:var(--mt);letter-spacing:1.5px;text-transform:uppercase}
+.qh-tags{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+.qs{font-size:10.5px;padding:4px 11px;border-radius:20px;background:rgba(96,165,250,.12);color:var(--ac);font-weight:700;letter-spacing:.3px}
+.qtp{font-size:10.5px;padding:4px 11px;border-radius:20px;background:rgba(167,139,250,.12);color:var(--pp);font-weight:700;letter-spacing:.3px}
+.qc{background:linear-gradient(160deg,rgba(30,41,65,.92) 0%,rgba(22,30,48,.85) 100%);border-radius:18px;padding:26px 28px;border:1px solid rgba(100,116,139,.22);margin-bottom:18px;box-shadow:0 8px 32px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.04);position:relative;overflow:hidden}
+.qc::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:linear-gradient(180deg,var(--ac),var(--pp));opacity:.8}
+.qt{font-size:16px;line-height:1.75;white-space:pre-wrap;font-variant-numeric:tabular-nums;color:#e8edf5;font-weight:400;letter-spacing:.1px}
+.os{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
+.ob{position:relative;background:rgba(22,30,48,.5);border:1.5px solid rgba(100,116,139,.18);border-radius:14px;padding:16px 20px 16px 62px;cursor:pointer;text-align:left;color:#cbd5e1;font-size:14.5px;line-height:1.6;transition:all .2s cubic-bezier(.4,0,.2,1);font-family:var(--ff);white-space:pre-wrap;min-height:56px;display:flex;align-items:center}
+.ob::before{content:attr(data-letter);position:absolute;left:14px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:rgba(100,116,139,.18);color:var(--mt);display:flex;align-items:center;justify-content:center;font-weight:800;font-size:13px;font-family:var(--mn);transition:all .2s;border:1.5px solid transparent}
+.ob:hover:not(.lk){border-color:rgba(96,165,250,.45);background:rgba(51,65,85,.55);transform:translateX(3px)}
+.ob:hover:not(.lk)::before{background:rgba(96,165,250,.22);color:var(--ac);border-color:rgba(96,165,250,.35)}
+.ob.sl{background:linear-gradient(90deg,rgba(96,165,250,.16),rgba(96,165,250,.07));border-color:rgba(96,165,250,.55);color:#bfdbfe;box-shadow:0 4px 14px rgba(96,165,250,.12)}
+.ob.sl::before{background:var(--ac);color:#fff;border-color:rgba(96,165,250,.35);box-shadow:0 0 0 4px rgba(96,165,250,.18)}
+.ob.ok{background:linear-gradient(90deg,rgba(52,211,153,.16),rgba(52,211,153,.06));border-color:rgba(52,211,153,.55);color:#a7f3d0;box-shadow:0 4px 14px rgba(52,211,153,.12)}
+.ob.ok::before{content:'\2713';background:var(--gn);color:#052e16;font-size:16px;border-color:rgba(52,211,153,.35);box-shadow:0 0 0 4px rgba(52,211,153,.18)}
+.ob.no{background:linear-gradient(90deg,rgba(248,113,113,.12),rgba(248,113,113,.04));border-color:rgba(248,113,113,.45);color:#fecaca}
+.ob.no::before{content:'\2715';background:var(--rd);color:#450a0a;font-size:15px;border-color:rgba(248,113,113,.35)}
 .ob.lk{cursor:default}
+.ob.lk:not(.ok):not(.no):not(.sl){opacity:.55}
 .eb{width:100%;padding:14px;background:rgba(167,139,250,.12);border:1.5px solid rgba(167,139,250,.3);border-radius:12px;color:var(--pp);font-weight:700;font-size:14px;cursor:pointer;font-family:var(--ff);margin-bottom:12px;transition:all .2s}
 .eb:hover{background:rgba(167,139,250,.2)}
 .ex{background:rgba(22,30,48,.7);border:1px solid rgba(167,139,250,.2);border-radius:14px;padding:20px;margin-bottom:14px}
@@ -147,7 +156,7 @@ function start(m){
   TI=setInterval(()=>{S.tt++;S.qt++;R()},1000);
 }
 
-function pick(i){if(S.sel!==null)return;S.sel=i;S.ans[S.ci]=i;S.qts[S.ci]=S.qt;R()}
+function pick(i){if(S.showExp[S.ci])return;S.sel=i;S.ans[S.ci]=i;S.qts[S.ci]=S.qt;R()}
 function nxt(){if(S.ci<S.qs.length-1){S.ci++;S.sel=S.ans[S.ci]??null;S.qt=0;R()}else{S.run=false;S.screen='results';clearInterval(TI);R()}}
 function prv(){if(S.ci>0){S.ci--;S.sel=S.ans[S.ci]??null;S.qt=0;R()}}
 function go(i){S.ci=i;S.sel=S.ans[i]??null;S.qt=0;R()}
@@ -503,13 +512,15 @@ function rQuiz(){
   let opts='';
   q.opts.forEach((o,i)=>{
     let c='ob';
-    if(S.sel!==null)c+=' lk';
+    const raw=o.trim();
+    const letter=raw[0];
+    const body=raw.replace(/^[A-Z]\)\s*/,'');
+    if(showE)c+=' lk';
     if(showE&&S.sel!==null){
-      const sl=o.trim()[0];
-      if(sl===correctLetter)c+=' ok';
+      if(letter===correctLetter)c+=' ok';
       else if(S.sel===i)c+=' no';
     }else if(S.sel===i)c+=' sl';
-    opts+='<button class="'+c+'" onclick="pick('+i+')">'+esc(o)+'</button>';
+    opts+='<button class="'+c+'" data-letter="'+letter+'" onclick="pick('+i+')">'+esc(body)+'</button>';
   });
 
   let exp='';
@@ -548,7 +559,7 @@ function rQuiz(){
     '<button class="tbn" onclick="S.stats=!S.stats;R()">'+(S.stats?'Ocultar':'Stats')+'</button>'+
     '</div><div class="pb"><div class="pf" style="width:'+prg+'%"></div></div>'+statsH+'</div>'+
     '<div class="ctr" style="padding-top:16px;padding-bottom:80px">'+
-    '<div class="qh"><span class="qn">Pregunta '+(S.ci+1)+' de '+S.qs.length+'</span><span class="qs">'+q.src+'</span></div>'+
+    '<div class="qh"><span class="qn">Pregunta '+(S.ci+1)+' de '+S.qs.length+'</span><div class="qh-tags">'+(q.topic?'<span class="qtp">'+esc(q.topic)+'</span>':'')+'<span class="qs">'+q.src+'</span></div></div>'+
     '<div class="qc"><div class="qt">'+esc(q.text)+'</div></div>'+
     '<div class="os">'+opts+'</div>'+exp+
     '<div class="nr"><button class="nb np" onclick="prv()"'+(S.ci===0?' disabled':'')+'">\u2190 Anterior</button><button class="nb nn" onclick="nxt()"'+(S.sel===null?' disabled':'')+'>'+(S.ci===S.qs.length-1?'Finalizar \u2713':'Siguiente \u2192')+'</button></div>'+
@@ -617,7 +628,7 @@ function rReview(){
 document.addEventListener('keydown',function(e){
   if(S.screen==='quiz'){
     const q=S.qs[S.ci];
-    if(S.sel===null&&q){
+    if(!S.showExp[S.ci]&&q){
       const ki={'a':0,'b':1,'c':2,'1':0,'2':1,'3':2};
       const idx=ki[e.key.toLowerCase()];
       if(idx!==undefined&&idx<q.opts.length){pick(idx);return}
